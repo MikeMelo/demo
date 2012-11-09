@@ -11,6 +11,10 @@ public interface DatabaseAccessor
 {
 
    int GetRoom (int entry);
+   int GetNumLectures();
+   int getTeacher(int entry);
+   int getLecture(int entry);
+   int getNumRooms();
    
-    
+   
 }

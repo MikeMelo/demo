@@ -9,11 +9,11 @@
  */
 public class Gene 
 {
-    int teacher;
-    int lecture;
-    int room;
-    int time;
-    int i=1;
+    public int teacher;
+    public int lecture;
+    public int room;
+    public int time;
+    public int i=1;
     
     public Gene(int t,int l, int r, int time)
     {

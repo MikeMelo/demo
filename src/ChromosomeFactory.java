@@ -22,42 +22,32 @@ public class ChromosomeFactory
        
    c = new Chromosome(l);
    
-   //DatabseAccess da = new DatabaseAccess
+   DummyDatabase da = new DummyDatabase();
    
-   //int teacher = da.getTeacher;
-   //int lecture = da.getLecture;
-   
-   //int numOfRooms = da.GetNumRooms
-   int numLectures=1;
-   int numOfRooms=1;
-   
+   int numOfLectures = da.GetNumLectures();
+   int numOfRooms = da.getNumRooms();
    Random rand = new Random();
-   
-   
+
    int i=0;
    
-   while(i<=numLEctures)
+   while(i<=numOfLectures)
    {
-       
-   int teacher=1;
-   int lecture=1;
+  
+   int lecture = da.getLecture(i);   
+   int teacher = da.getTeacher(i);
+   
    int RoomID = rand.nextInt(numOfRooms);
    int TimeSlotID = rand.nextInt(55);    
    Gene g = new Gene(teacher,lecture,RoomID,TimeSlotID);
    
    c.genes[i] = g;
    
+   System.out.println(""+this.c.genes[i].teacher+""+this.c.genes[i].lecture+""+this.c.genes[i].room+""+this.c.genes[i].time+"");
+   
+   
    i++;
    }
    
-   }
 
-    
-    
-    
-    
-    
-    
-    
-    
+   }  
 }
