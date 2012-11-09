@@ -133,8 +133,8 @@ public class FitnessFunction
         ltf.c.genes[18]=g19;
         
         
-        rc.setWeight(1); 
-        ltc.setWeight(1);
+        rc.setWeight(0.4); 
+        ltc.setWeight(0.4);
                 
                 
         ltf.setWeight(0.01);
