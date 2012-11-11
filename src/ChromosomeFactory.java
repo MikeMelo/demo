@@ -17,32 +17,34 @@ public class ChromosomeFactory
     
    
 
-   public ChromosomeFactory(int l)
+   public ChromosomeFactory()
    {
        
-   c = new Chromosome(l);
-   
    DummyDatabase da = new DummyDatabase();
+   int numOfLectures = da.GetNumLectures();    
+   c = new Chromosome(numOfLectures);
    
-   int numOfLectures = da.GetNumLectures();
-   int numOfRooms = da.getNumRooms();
-   Random rand = new Random();
+   
+   
+   
+   
+   
 
    int i=0;
    
-   while(i<=numOfLectures)
+   while(i<=numOfLectures-1)
    {
   
    int lecture = da.getLecture(i);   
-   int teacher = da.getTeacher(i);
    
-   int RoomID = rand.nextInt(numOfRooms);
-   int TimeSlotID = rand.nextInt(55);    
-   Gene g = new Gene(teacher,lecture,RoomID,TimeSlotID);
+   int r = da.Rooms[(int)(Math.random() * da.Rooms.length)];
+   int t = da.TimeSlots[(int)(Math.random() * da.TimeSlots.length)]; 
+   
+   Gene g = new Gene(lecture,lecture,r,t);
    
    c.genes[i] = g;
    
-   System.out.println(""+this.c.genes[i].teacher+""+this.c.genes[i].lecture+""+this.c.genes[i].room+""+this.c.genes[i].time+"");
+   System.out.println(""+this.c.genes[i].teacher+","+this.c.genes[i].lecture+","+this.c.genes[i].room+","+this.c.genes[i].time+"");
    
    
    i++;

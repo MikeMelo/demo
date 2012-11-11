@@ -13,15 +13,16 @@ public class Main
     public static void main(String args[])
      {
      
-         //Test function on current timetable
+         ChromosomeFactory cf = new ChromosomeFactory();
+         FitnessFunction ff = new FitnessFunction(cf.c);
+         
+        Double score = ff.calculateFitnesScore();
 
-         FitnessFunction ff = new FitnessFunction();
-         System.out.println(ff.calculateFitnesScore());
+        System.out.println("------------");
+        System.out.println("Fitness Score");
+        System.out.println("------------");
+        System.out.println(score);
          
-         System.out.println("Random Chromosome");
-         System.out.println("------------------");
-         
-         ChromosomeFactory cf = new ChromosomeFactory(19);
          
      }
     

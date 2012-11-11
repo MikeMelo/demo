@@ -13,7 +13,7 @@ public class Gene
     public int lecture;
     public int room;
     public int time;
-    public int i=1;
+   
     
     public Gene(int t,int l, int r, int time)
     {

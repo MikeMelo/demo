@@ -9,10 +9,10 @@ public class RoomClashes extends constraintInterface
     
    Chromosome c;
     
-   public RoomClashes(int l)
+   public RoomClashes(Chromosome chromo)
     {
     
-    c = new Chromosome(l);
+    c = chromo;
     
     }    
     

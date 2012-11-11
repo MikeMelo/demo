@@ -12,7 +12,7 @@ public class Chromosome
 
     Gene[] genes;
    
-    //Format will be off teacher, lecture, timeslot, room
+    
      
     public Chromosome(int l)
     {

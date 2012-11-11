@@ -11,9 +11,9 @@ public class LunchTimeFree extends constraintInterface {
 
     Chromosome c;
     
-    public LunchTimeFree(int l)
+    public LunchTimeFree(Chromosome chromo)
     {
-    c = new Chromosome(l);
+    c = chromo;
     }
     
 
@@ -28,28 +28,18 @@ public class LunchTimeFree extends constraintInterface {
     int y = c.getLength();
   
   
-    while(i <= y-1 )
-    {
-        
-int time;
-       
-Gene g;
-g = c.genes[i];
-time = g.time;
-
-        if (time >= 16 && time <= 25)
-                            { 
-                                
-            violations = violations + 1;
-                                
-                            } 
- 
-                i++;
-    }      
+    for (i=0; i < c.getLength(); i++) {
+final Gene[] allGenes = c.genes;
+final Gene aGene = allGenes[i];
+final int time = aGene.time;
+   if (time >= 16 && time <= 25) {                           
+      violations++;   
+   }
+}
     
-    System.out.println(violations);
+   
     return violations*this.weight;
-  
+    
     }
     
 }
