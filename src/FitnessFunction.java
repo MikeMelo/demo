@@ -22,11 +22,11 @@ public class FitnessFunction
     {
      
        RoomClashes rc = new RoomClashes(c);
-       // LecturerTimeClashes ltc = new LecturerTimeClashes(length);
+       LecturerTimeClashes ltc = new LecturerTimeClashes(c);
         LunchTimeFree ltf = new LunchTimeFree(c);
        
         rc.setWeight(1); 
-        //ltc.setWeight(0.4);
+        ltc.setWeight(1);
                 
                 
         ltf.setWeight(0.01);

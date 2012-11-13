@@ -1,7 +1,10 @@
+import EntityClasses.*;
+
 
 public class DummyDatabase implements DatabaseAccessor
 {
-
+   
+   
    int[] Lecturers = { 1,2,3,4,5,6,7,8,9 };
    int[] Lectures = { 1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19} ;
    
@@ -39,6 +42,6 @@ public class DummyDatabase implements DatabaseAccessor
         return this.Rooms.length;
     }
 
-   
+     
     
    }

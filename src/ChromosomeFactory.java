@@ -17,7 +17,7 @@ public class ChromosomeFactory
     
    
 
-   public ChromosomeFactory()
+   public Chromosome newChromo()
    {
        
    DummyDatabase da = new DummyDatabase();
@@ -43,13 +43,11 @@ public class ChromosomeFactory
    Gene g = new Gene(lecture,lecture,r,t);
    
    c.genes[i] = g;
-   
-   System.out.println(""+this.c.genes[i].teacher+","+this.c.genes[i].lecture+","+this.c.genes[i].room+","+this.c.genes[i].time+"");
-   
-   
+ 
    i++;
    }
    
+   return this.c;
 
    }  
 }

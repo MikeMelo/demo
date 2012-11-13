@@ -41,7 +41,7 @@ public class RoomClashes extends constraintInterface
 
     CombinationClass rts = new CombinationClass(time,room);
     int hashCode = rts.hashCode();
-            
+        
        
         
         if (RoomMap.containsKey(hashCode)) 

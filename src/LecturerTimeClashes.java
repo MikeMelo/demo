@@ -17,10 +17,10 @@ public class LecturerTimeClashes extends constraintInterface
     
    Chromosome c;
     
-    public LecturerTimeClashes(int l)
+    public LecturerTimeClashes(Chromosome chromo)
     {
     
-    c = new Chromosome(l);
+    c = chromo;
     
     }    
     
